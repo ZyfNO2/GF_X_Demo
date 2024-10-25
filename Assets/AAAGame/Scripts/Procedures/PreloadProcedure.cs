@@ -27,7 +27,7 @@ public class PreloadProcedure : ProcedureBase
         GF.BuiltinView.ShowLoadingProgress();
         GF.LogInfo("进入HybridCLR热更流程! 预加载游戏数据...");
 
-        InitAppSettings();
+        //InitAppSettings();
         PreloadAndInitData();
     }
 
@@ -62,13 +62,13 @@ public class PreloadProcedure : ProcedureBase
             ChangeState<ChangeSceneProcedure>(procedureOwner);
         }
     }
-    private void InitAppSettings()
-    {
-        if (string.IsNullOrWhiteSpace(GF.Setting.GetABTestGroup()))
-        {
-            GF.Setting.SetABTestGroup("B");//设置A/B测试组; 应由服务器分配该新用户所属测试组
-        }
-    }
+    // private void InitAppSettings()
+    // {
+    //     if (string.IsNullOrWhiteSpace(GF.Setting.GetABTestGroup()))
+    //     {
+    //         GF.Setting.SetABTestGroup("B");//设置A/B测试组; 应由服务器分配该新用户所属测试组
+    //     }
+    // }
     /// <summary>
     /// 预加载完成之后需要处理的事情
     /// </summary>
