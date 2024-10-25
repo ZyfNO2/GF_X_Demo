@@ -50,14 +50,18 @@ public class ChangeSceneProcedure : ProcedureBase
             return;
         }
 
+        
+        ChangeState<MyMenuProcedure>(procedureOwner);
+        
+        
         //场景加载完成,根据不同场景切换对应Procedure
-        switch (nextScene)
-        {
-            case "Game":
-                ChangeState<MenuProcedure>(procedureOwner);
-                //GF.Sound.PlayBGM("BillieEilishMusic.wav");
-                break;
-        }
+        // switch (nextScene)
+        // {
+        //     case "Game":
+        //         ChangeState<MenuProcedure>(procedureOwner);
+        //         //GF.Sound.PlayBGM("BillieEilishMusic.wav");
+        //         break;
+        // }
     }
 
     protected override void OnLeave(IFsm<IProcedureManager> procedureOwner, bool isShutdown)
