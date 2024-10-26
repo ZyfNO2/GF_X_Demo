@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/UI/Test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/UI/Test.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/UI/MyMenuUIForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/UI/MyMenuUIForm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/ScriptableAssets/Core/AppConfigs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/ScriptableAssets/Core/AppConfigs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/MyMenuUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/MyMenuUIForm.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +113,8 @@
       <workItem from="1729866232449" duration="563000" />
       <workItem from="1729866824288" duration="4228000" />
       <workItem from="1729873416632" duration="260000" />
+      <workItem from="1729920332421" duration="1172000" />
+      <workItem from="1729921520682" duration="1929000" />
     </task>
     <servers />
   </component>

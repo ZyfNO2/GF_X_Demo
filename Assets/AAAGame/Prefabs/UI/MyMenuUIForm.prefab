@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u70B9\u51FB\u5F00\u59CB"
+  m_Text: "\u4EFB\u610F\u952E\u8FDB\u884C\u6E38\u620F\uFF08Space\uFF09"
 --- !u!114 &2125572406840620875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7328104377854489827}
         m_TargetAssemblyTypeName: UIFormBase, Hotfix
         m_MethodName: ClickUIButton
         m_Mode: 5
@@ -721,9 +721,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5324967232595930154}
   - {fileID: 8689082886481092815}
   - {fileID: 6524089424020174570}
+  - {fileID: 5324967232595930154}
   m_Father: {fileID: 649677180152846022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1114,4 +1114,3 @@ MonoBehaviour:
   topBar: {fileID: 5324967232595930154}
   m_OpenAnimation: {fileID: 0}
   m_CloseAnimation: {fileID: 0}
-  showLvSwitch: 0

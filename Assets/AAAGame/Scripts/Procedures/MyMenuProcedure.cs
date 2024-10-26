@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 public class MyMenuProcedure : ProcedureBase
 {
+    private int myMenuUIFormId;
     IFsm<IProcedureManager> procedure;
     
     
@@ -21,7 +22,7 @@ public class MyMenuProcedure : ProcedureBase
         //TO DO  生成UI
         //var uiParms = UIParams.Create();//用于给UI传递各种参数
         
-        GF.UI.OpenUIForm(UIViews.MyMenuUIForm);
+        myMenuUIFormId = GF.UI.OpenUIForm(UIViews.MyMenuUIForm);
         GFBuiltin.BuiltinView.HideLoadingProgress();
         Log.Info("<<<<<<<<<<<<" + "Success Open MyMenuUIForm");
 
@@ -30,6 +31,10 @@ public class MyMenuProcedure : ProcedureBase
     protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
+        if (Input.GetKey(KeyCode.Space) && GF.UI.GetTopUIFormId() == myMenuUIFormId)
+        {
+            EnterGame();
+        }
     }
     
     
@@ -38,10 +43,20 @@ public class MyMenuProcedure : ProcedureBase
     {
         //TO DO 关闭Menu：
         
+        GF.UI.CloseUIForm(myMenuUIFormId);
+        
         GF.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
         GF.Event.Unsubscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
         base.OnLeave(procedureOwner, isShutdown);
     }
+    
+    public void EnterGame()
+    {
+        //this.procedure.SetData<VarInt32>("LevelEntityId", levelEntityId);
+        Log.Info("<<<<<<<<<<<<" + "Success Enter MyGameProcedurce");
+        ChangeState<MyGameProcedure>(procedure);
+    }
+    
     
     private void OnOpenUIFormSuccess(object sender, GameEventArgs e)
     {

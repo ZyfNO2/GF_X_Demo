@@ -31,5 +31,6 @@ MonoBehaviour:
   - Korean
   mProcedures:
   - ChangeSceneProcedure
+  - MyGameProcedure
   - MyMenuProcedure
   - PreloadProcedure
