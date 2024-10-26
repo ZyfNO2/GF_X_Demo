@@ -20,7 +20,7 @@ public class MyMenuProcedure : ProcedureBase
         GF.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);//订阅UI打开事件, UI打开成功时触发
         
         //TO DO  生成UI
-        //var uiParms = UIParams.Create();//用于给UI传递各种参数
+        //其实我觉得不应该直接就EnterGame的，之后再改吧
         
         myMenuUIFormId = GF.UI.OpenUIForm(UIViews.MyMenuUIForm);
         GFBuiltin.BuiltinView.HideLoadingProgress();

@@ -186,7 +186,9 @@ public class PreloadProcedure : ProcedureBase
         if (language == GameFramework.Localization.Language.Unspecified)
         {
 #if UNITY_EDITOR
-            language = GF.Base.EditorLanguage;
+            language = GFBuiltin.Localization.SystemLanguage;
+            //language = GF.Base.EditorLanguage;
+            GF.LogInfo(language.ToString());
 #else
             language = GFBuiltin.Localization.SystemLanguage;//默认语言跟随用户操作系统语言
 #endif
@@ -202,6 +204,7 @@ public class PreloadProcedure : ProcedureBase
         GF.Setting.SetLanguage(language, false);
         GF.LogInfo(Utility.Text.Format("初始化游戏设置. 游戏语言:{0},系统语言:{1}", language, GFBuiltin.Localization.SystemLanguage));
 
+        GF.Localization.LoadLanguage(langRow.AssetName, this);
         GF.Localization.LoadLanguage(langRow.AssetName, this);
     }
 

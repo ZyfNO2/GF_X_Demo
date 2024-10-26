@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u4EFB\u610F\u952E\u8FDB\u884C\u6E38\u620F\uFF08Space\uFF09"
+  m_Text: "\u7A7A\u683C\u5F00\u59CB\u6E38\u620F"
 --- !u!114 &2125572406840620875
 MonoBehaviour:
   m_ObjectHideFlags: 0
