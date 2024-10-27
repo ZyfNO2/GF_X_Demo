@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AAAGameData/Languages/ChineseSimplified.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/AAAGameData/Languages/ChineseSimplified.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaSansKR SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaSansKR SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Language/ChineseSimplified.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Language/ChineseSimplified.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/UI/MyMenuUIForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/UI/MyMenuUIForm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +113,8 @@
       <workItem from="1729920332421" duration="1172000" />
       <workItem from="1729921520682" duration="2476000" />
       <workItem from="1729957940284" duration="1000" />
-      <workItem from="1729957951487" duration="3728000" />
+      <workItem from="1729957951487" duration="4740000" />
+      <workItem from="1730002114913" duration="931000" />
     </task>
     <servers />
   </component>

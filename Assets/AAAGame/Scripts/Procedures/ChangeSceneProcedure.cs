@@ -39,6 +39,7 @@ public class ChangeSceneProcedure : ProcedureBase
         GF.Base.ResetNormalGameSpeed();
 
         nextScene = procedureOwner.GetData<VarString>("NextScene");
+        //nextScene = "MyGame";
         GF.Scene.LoadScene(UtilityBuiltin.AssetsPath.GetScenePath(nextScene), this);
     }
 
