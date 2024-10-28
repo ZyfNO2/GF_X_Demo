@@ -5,10 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_0.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_0.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAAGameData/DataTables/LevelTable.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/AAAGameData/DataTables/LevelTable.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/CameraViewTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/CameraViewTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/ColorTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/ColorTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/EntityGroupTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/EntityGroupTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/LanguagesTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/LanguagesTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/SoundGroupTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/SoundGroupTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/UIGroupTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/UIGroupTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/UITable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/UITable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable#A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable#A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/PlayerDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/PlayerDataModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/CameraViewTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/CameraViewTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/ColorTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/ColorTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/EntityGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/EntityGroupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/LanguagesTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/LanguagesTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/SoundGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/SoundGroupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UIGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UIGroupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UITable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UITable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/LevelTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/LevelTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Core/EntityParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Core/EntityParams.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/Core/UIViews.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/Core/UIViews.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +45,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5e53ad466ce74a6082606d7fa046fc9b95c800/54/3caedeee/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b9f607e27b8644e0bf609b59dfb1c8525735b0/67/ed26dac0/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc2f9c8962ab4786828dbc883e8fcfa01fe00/ab/f5d6eec5/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Common/CameraFollower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MenuProcedure.cs" root0="FORCE_HIGHLIGHTING" />
@@ -27,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/MyMenuUIForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/GFBuiltin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Procedures/UpdateResourcesProcedure.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.1/Samples~/Cinemachine Example Scenes/Shared/Scripts/PlayerMove.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -114,7 +143,9 @@
       <workItem from="1729921520682" duration="2476000" />
       <workItem from="1729957940284" duration="1000" />
       <workItem from="1729957951487" duration="4740000" />
-      <workItem from="1730002114913" duration="931000" />
+      <workItem from="1730002114913" duration="3035000" />
+      <workItem from="1730033511008" duration="4852000" />
+      <workItem from="1730116851278" duration="8453000" />
     </task>
     <servers />
   </component>
