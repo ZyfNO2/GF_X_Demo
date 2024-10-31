@@ -33,12 +33,12 @@ public class PlayerEntity : SampleEntity
     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(elapseSeconds, realElapseSeconds);
-        if (!Ctrlable) return;
+        //if (!Ctrlable) return;
         isGrounded = characterCtrl.isGrounded;
 
-        Move();//ÒÆ¶¯
-        Fire();
-        Jump();//ÌøÔ¾
+        Move();//ï¿½Æ¶ï¿½
+        //Fire();
+        Jump();//ï¿½ï¿½Ô¾
     }
     private void Fire()
     {
@@ -52,20 +52,38 @@ public class PlayerEntity : SampleEntity
     }
     private void Move()
     {
-        float movePower = GF.StaticUI.Joystick.GetDistance();
-        joystickForward.Set(GF.StaticUI.Joystick.GetHorizontalAxis(), 0, GF.StaticUI.Joystick.GetVerticalAxis());
-        if (movePower > 0.001f)
-        {
-            characterCtrl.transform.forward = Vector3.Slerp(characterCtrl.transform.forward, joystickForward, Time.deltaTime * rotationSpeed);
-        }
+        //float movePower = GF.StaticUI.Joystick.GetDistance();
+        // joystickForward.Set(GF.StaticUI.Joystick.GetHorizontalAxis(), 0, GF.StaticUI.Joystick.GetVerticalAxis());
+        // if (movePower > 0.001f)
+        // {
+        //     characterCtrl.transform.forward = Vector3.Slerp(characterCtrl.transform.forward, joystickForward, Time.deltaTime * rotationSpeed);
+        // }
 
-        if (isGrounded)
+        // if (isGrounded)
+        // {
+        //     if (playerVelocity.y < 0) playerVelocity.y = 0;
+        //     moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
+        // }
+
+        //characterCtrl.Move(moveStep * Time.deltaTime);
+
+
+        float movePower = 1f;
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        characterCtrl.transform.forward = new Vector3(h, 0, v);
+        
+        if (isGrounded )
         {
             if (playerVelocity.y < 0) playerVelocity.y = 0;
-            moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
+            if(h==0 && v==0) return;
+            moveStep = characterCtrl.transform.forward * (moveSpeed * movePower);
+            //moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
         }
-
+        
         characterCtrl.Move(moveStep * Time.deltaTime);
+        
+
     }
 
     private void Jump()

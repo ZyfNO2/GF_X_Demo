@@ -1248,7 +1248,7 @@ namespace GameFramework.Entity
             {
                 throw new GameFrameworkException("Show entity info is invalid.");
             }
-
+            
             if (m_EntitiesToReleaseOnLoad.Contains(showEntityInfo.SerialId))
             {
                 m_EntitiesToReleaseOnLoad.Remove(showEntityInfo.SerialId);
@@ -1256,11 +1256,11 @@ namespace GameFramework.Entity
                 m_EntityHelper.ReleaseEntity(entityAsset, null);
                 return;
             }
-
+            
             m_EntitiesBeingLoaded.Remove(showEntityInfo.EntityId);
             EntityInstanceObject entityInstanceObject = EntityInstanceObject.Create(entityAssetName, entityAsset, m_EntityHelper.InstantiateEntity(entityAsset), m_EntityHelper);
             showEntityInfo.EntityGroup.RegisterEntityInstanceObject(entityInstanceObject, true);
-
+            
             InternalShowEntity(showEntityInfo.EntityId, entityAssetName, showEntityInfo.EntityGroup, entityInstanceObject.Target, true, duration, showEntityInfo.UserData);
             ReferencePool.Release(showEntityInfo);
         }

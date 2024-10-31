@@ -6,9 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Font/Common/AlibabaPuHuiTi-3-85-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable#A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable#A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/PlayerDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/PlayerDataModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/CameraViewTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/CameraViewTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/ColorTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/ColorTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/EntityGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/EntityGroupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/LanguagesTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/LanguagesTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/SoundGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/SoundGroupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UIGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UIGroupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UITable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UITable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/LevelTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/LevelTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGameFramework/GameFramework/Entity/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/UnityGameFramework/GameFramework/Entity/EntityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +130,11 @@
       <workItem from="1729957940284" duration="1000" />
       <workItem from="1729957951487" duration="4740000" />
       <workItem from="1730002114913" duration="931000" />
+      <workItem from="1730374646931" duration="5000" />
+      <workItem from="1730374663975" duration="1000" />
+      <workItem from="1730374683928" duration="16000" />
+      <workItem from="1730374708172" duration="601000" />
+      <workItem from="1730391518116" duration="2379000" />
     </task>
     <servers />
   </component>
