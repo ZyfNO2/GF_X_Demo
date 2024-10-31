@@ -21,8 +21,7 @@ public class PlayerEntity : SampleEntity
         set
         {
             mCtrlable = value;
-            //摇杆先禁用
-            //if (!IsAIPlayer) GF.StaticUI.JoystickEnable = mCtrlable;
+            if (!IsAIPlayer) GF.StaticUI.JoystickEnable = mCtrlable;
         }
     }
     protected override void OnInit(object userData)
@@ -37,9 +36,9 @@ public class PlayerEntity : SampleEntity
         if (!Ctrlable) return;
         isGrounded = characterCtrl.isGrounded;
 
-        Move();//移动
-        //Fire();
-        Jump();//跳跃
+        Move();//�ƶ�
+        Fire();
+        Jump();//��Ծ
     }
     private void Fire()
     {
@@ -51,43 +50,22 @@ public class PlayerEntity : SampleEntity
             GF.Entity.ShowEntity<BulletEntity>("Bullet", Const.EntityGroup.Effect, fireParms);
         }
     }
-    
-    public float horizontalinput;//水平参数
-    public float Verticalinput;//垂直参数
-    float speed=10.0f;//声明一个参数，没有规定    
-    
     private void Move()
     {
-        // float movePower = GF.StaticUI.Joystick.GetDistance();
-        // joystickForward.Set(GF.StaticUI.Joystick.GetHorizontalAxis(), 0, GF.StaticUI.Joystick.GetVerticalAxis());
-        // if (movePower > 0.001f)
-        // {
-        //     characterCtrl.transform.forward = Vector3.Slerp(characterCtrl.transform.forward, joystickForward, Time.deltaTime * rotationSpeed);
-        // }
-        //
-        // if (isGrounded)
-        // {
-        //     if (playerVelocity.y < 0) playerVelocity.y = 0;
-        //     moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
-        // }
-        //
-        // characterCtrl.Move(moveStep * Time.deltaTime);
-        
-        horizontalinput = Input.GetAxis("Horizontal");
-        //AD方向控制
-        Verticalinput = Input.GetAxis("Vertical");
-        //WS方向控制
-        
-        if (horizontalinput == 0 && Verticalinput == 0)
+        float movePower = GF.StaticUI.Joystick.GetDistance();
+        joystickForward.Set(GF.StaticUI.Joystick.GetHorizontalAxis(), 0, GF.StaticUI.Joystick.GetVerticalAxis());
+        if (movePower > 0.001f)
         {
-            return;
+            characterCtrl.transform.forward = Vector3.Slerp(characterCtrl.transform.forward, joystickForward, Time.deltaTime * rotationSpeed);
         }
-        characterCtrl.transform.forward = new Vector3(horizontalinput, 0, Verticalinput);
 
-        moveStep = characterCtrl.transform.forward * moveSpeed;
-        
+        if (isGrounded)
+        {
+            if (playerVelocity.y < 0) playerVelocity.y = 0;
+            moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
+        }
+
         characterCtrl.Move(moveStep * Time.deltaTime);
-        
     }
 
     private void Jump()

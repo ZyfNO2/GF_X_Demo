@@ -1,4 +1,4 @@
-#pragma warning disable IDE1006 // å‘½åæ ·å¼
+#pragma warning disable IDE1006 // ÃüÃûÑùÊ½
 using GameFramework;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -14,26 +14,26 @@ public class EntityParams : RefParams
     public int gameObjectLayer { get; set; } = -1;
 
     /// <summary>
-    /// ç»‘å®šåˆ°çˆ¶å®ä½“
+    /// °ó¶¨µ½¸¸ÊµÌå
     /// </summary>
     public Entity AttchToEntity { get; set; } = null;
     /// <summary>
-    /// æŒ‡å®šç»‘å®šåˆ°çˆ¶å®ä½“ä¸‹çš„å“ªä¸ªèŠ‚ç‚¹
+    /// Ö¸¶¨°ó¶¨µ½¸¸ÊµÌåÏÂµÄÄÄ¸ö½Úµã
     /// </summary>
     public Transform ParentTransform { get; set; } = null;
 
     /// <summary>
-    /// å®ä½“æ˜¾ç¤ºæ—¶å›è°ƒ
+    /// ÊµÌåÏÔÊ¾Ê±»Øµ÷
     /// </summary>
     public GameFrameworkAction<EntityLogic> OnShowCallback { get; set; } = null;
 
     /// <summary>
-    /// å®ä½“éšè—æ—¶å›è°ƒ
+    /// ÊµÌåÒş²ØÊ±»Øµ÷
     /// </summary>
     public GameFrameworkAction<EntityLogic> OnHideCallback { get; set; } = null;
 
     /// <summary>
-    /// åˆ›å»ºä¸€ä¸ªå®ä¾‹(å¿…é¡»ä½¿ç”¨è¯¥æ¥å£åˆ›å»º)
+    /// ´´½¨Ò»¸öÊµÀı(±ØĞëÊ¹ÓÃ¸Ã½Ó¿Ú´´½¨)
     /// </summary>
     /// <param name="position"></param>
     /// <param name="eulerAngles"></param>
@@ -63,4 +63,4 @@ public class EntityParams : RefParams
         OnHideCallback = null;
     }
 }
-#pragma warning restore IDE1006 // å‘½åæ ·å¼
+#pragma warning restore IDE1006 // ÃüÃûÑùÊ½

@@ -7,10 +7,8 @@ using UnityGameFramework.Runtime;
 public class MyMenuProcedure : ProcedureBase
 {
     private int myMenuUIFormId;
-    int levelEntityId;
     IFsm<IProcedureManager> procedure;
-    LevelEntity lvEntity;
-    private MyMenuUIForm myMenuUIForm;
+    
     
     protected override void OnEnter(IFsm<IProcedureManager> procedureOwner)
     {
@@ -20,56 +18,23 @@ public class MyMenuProcedure : ProcedureBase
         procedure = procedureOwner;
         GF.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);//订阅Entity打开事件, Entity显示成功时触发
         GF.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);//订阅UI打开事件, UI打开成功时触发
-        ShowLevel();
+        
+        //TO DO  生成UI
+        //其实我觉得不应该直接就EnterGame的，之后再改吧
+        
+        myMenuUIFormId = GF.UI.OpenUIForm(UIViews.MyMenuUIForm);
+        GFBuiltin.BuiltinView.HideLoadingProgress();
+        Log.Info("<<<<<<<<<<<<" + "Success Open MyMenuUIForm");
+
     }
 
     protected override void OnUpdate(IFsm<IProcedureManager> procedureOwner, float elapseSeconds, float realElapseSeconds)
     {
         base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-        
-        if (myMenuUIForm == null || lvEntity == null)
-        {
-            return;
-        }
-        
         if (Input.GetKey(KeyCode.Space) && GF.UI.GetTopUIFormId() == myMenuUIFormId)
         {
             EnterGame();
         }
-    }
-    
-    public void ShowLevel()
-    {
-        GF.UI.CloseAllLoadingUIForms();
-        GF.UI.CloseAllLoadedUIForms();
-        GF.Entity.HideAllLoadingEntities();
-        GF.Entity.HideAllLoadedEntities();
-        //异步打开主菜单UI
-        var uiParms = UIParams.Create();//用于给UI传递各种参数
-        uiParms.OpenCallback = uiLogic =>
-        {
-            myMenuUIForm = uiLogic as MyMenuUIForm;
-        };
-        myMenuUIFormId = GF.UI.OpenUIForm(UIViews.MyMenuUIForm, uiParms);
-        
-        
-        
-        //动态创建关卡
-        var lvTb = GF.DataTable.GetDataTable<LevelTable>();
-        //var playerMd = GF.DataModel.GetOrCreate<PlayerDataModel>();
-        //！！！硬编码，记得修改
-        var lvRow = lvTb.GetDataRow(6);
-        var lvParams = EntityParams.Create(Vector3.zero, Vector3.zero, Vector3.one);
-        lvParams.Set(LevelEntity.P_LevelData, lvRow);
-        lvParams.Set(LevelEntity.P_LevelReadyCallback, (GameFrameworkAction)OnLevelAllReady);
-        levelEntityId = GF.Entity.ShowEntity<LevelEntity>(lvRow.LvPfbName, Const.EntityGroup.Level, lvParams);
-        
-    }
-    
-    private void OnLevelAllReady()
-    {
-        procedure.SetData<VarUnityObject>("LevelEntity", lvEntity);
-        GF.BuiltinView.HideLoadingProgress();
     }
     
     
@@ -101,11 +66,11 @@ public class MyMenuProcedure : ProcedureBase
     private void OnShowEntitySuccess(object sender, GameEventArgs e)
     {
         var args = e as ShowEntitySuccessEventArgs;
-        if (args.Entity.Id == levelEntityId)
-        {
-            lvEntity = args.Entity.Logic as LevelEntity;
-            CameraFollower.Instance.SetFollowTarget(lvEntity.transform);
-        }
+        // if (args.Entity.Id == levelEntityId)
+        // {
+        //     lvEntity = args.Entity.Logic as LevelEntity;
+        //     CameraFollower.Instance.SetFollowTarget(lvEntity.transform);
+        // }
     }
     
     

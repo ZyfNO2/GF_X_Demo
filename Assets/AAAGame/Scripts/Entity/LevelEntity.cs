@@ -40,11 +40,10 @@ public class LevelEntity : EntityBase
 
     private void SpawnAllEntity()
     {
-         var playerParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles, playerSpawnPoint.localScale);
-        
-         mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
-         loadEntityTaskList.Add(mPlayerId);
-        
+        var playerParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles, playerSpawnPoint.localScale);
+
+        mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
+        loadEntityTaskList.Add(mPlayerId);
     }
     public void StartGame()
     {
