@@ -14,7 +14,8 @@ public enum PivotAxis
 public class BillboardEntity : SampleEntity
 {
     PivotAxis PivotAxis = PivotAxis.Free;
-
+    
+    
     protected override void OnShow(object userData)
     {
         base.OnShow(userData);

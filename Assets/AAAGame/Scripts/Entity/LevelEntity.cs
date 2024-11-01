@@ -45,13 +45,6 @@ public class LevelEntity : EntityBase
 
         mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
         loadEntityTaskList.Add(mPlayerId);
-        
-        
-        var billboardParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles, playerSpawnPoint.localScale * 5);
-        
-        var mBillboardId = GF.Entity.ShowEntity<BillboardEntity>("BillBoardItem", Const.EntityGroup.Billboard, billboardParams);
-
-        loadEntityTaskList.Add(mBillboardId); 
     }
     public void StartGame()
     {

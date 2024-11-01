@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+//using AAAGame.Scripts.Entity;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 public class PlayerEntity : SampleEntity
 {
@@ -11,10 +14,13 @@ public class PlayerEntity : SampleEntity
     private float jumpHeight = 3f;
     private bool isGrounded;
     private Vector3 moveStep;
-    private Transform firePoint;
+    //private Transform firePoint;
     private float fireInterval = 0.4f;
     private float lastFireTime;
     private bool mCtrlable;
+    
+    List<int> loadEntityTaskList;
+    
     public bool Ctrlable
     {
         get => mCtrlable;
@@ -28,7 +34,8 @@ public class PlayerEntity : SampleEntity
     {
         base.OnInit(userData);
         characterCtrl = GetComponent<CharacterController>();
-        firePoint = transform.Find("FirePoint");
+        loadEntityTaskList = new List<int>();
+        //firePoint = transform.Find("FirePoint");
     }
     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
@@ -36,20 +43,16 @@ public class PlayerEntity : SampleEntity
         //if (!Ctrlable) return;
         isGrounded = characterCtrl.isGrounded;
 
-        Move();//�ƶ�
-        //Fire();
-        Jump();//��Ծ
+        Move();
+        
+        Jump();
+
+        Build();
+
+
+
     }
-    private void Fire()
-    {
-        if (Time.time - lastFireTime > fireInterval)
-        {
-            lastFireTime = Time.time;
-            var fireParms = EntityParams.Create(firePoint.position, firePoint.eulerAngles);
-            fireParms.Set<VarFloat>(BulletEntity.LIFE_TIME, 3f);
-            GF.Entity.ShowEntity<BulletEntity>("Bullet", Const.EntityGroup.Effect, fireParms);
-        }
-    }
+
     private void Move()
     {
         //float movePower = GF.StaticUI.Joystick.GetDistance();
@@ -89,11 +92,32 @@ public class PlayerEntity : SampleEntity
 
     private void Jump()
     {
-        if (isGrounded && (Input.GetMouseButtonDown(0) && !GF.UI.IsPointerOverUIObject(Input.mousePosition) || Input.GetButtonDown("Jump")))
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3f * Physics.gravity.y);
-        }
+        // if (isGrounded && (Input.GetMouseButtonDown(0) && !GF.UI.IsPointerOverUIObject(Input.mousePosition) || Input.GetButtonDown("Jump")))
+        // {
+        //     playerVelocity.y += Mathf.Sqrt(jumpHeight * -3f * Physics.gravity.y);
+        // }
         playerVelocity.y += Physics.gravity.y * Time.deltaTime;
         characterCtrl.Move(playerVelocity * Time.deltaTime);
     }
+
+    private void Build()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Log.Info("<<<<<<<<<<<<<<<" + "InBuild");
+            var buildingEntity = EntityParams.Create(this.transform.position, this.transform.eulerAngles,
+                this.transform.localScale );
+            
+            var mBuildingEntityId = GF.Entity.ShowEntity<BuildingEntity>("BuildingTest", Const.EntityGroup.Buliding, buildingEntity);
+            
+            loadEntityTaskList.Add(mBuildingEntityId);
+        }
+        
+        
+    }
+    
+    
+    
+    
 }

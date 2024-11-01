@@ -176,11 +176,6 @@ public static class UtilityBuiltin
             return Utility.Text.Format("Assets/AAAGame/ScriptableAssets/{0}.asset", v);
         }
         
-        public static string GetFloorAsset(string v)
-        {
-            return Utility.Text.Format("Assets/AAAGame/Prefabs/Entity/Building/tiles/square/{0}.asset", v);
-            //Assets/AAAGame/Prefabs/Entity/Building/tiles/square/square_forest.fbx
-        }
         
         
         
