@@ -5,25 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/BillBoardItem.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/BillBoardItem.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Sprites/Bulidings.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Sprites/Bulidings/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Sprites/Bulidings/18.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable#A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable#A.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/LevelTable.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/PlayerDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/PlayerDataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/CameraViewTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/CameraViewTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/ColorTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/ColorTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/EntityGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/EntityGroupTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/LanguagesTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/LanguagesTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/SoundGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/SoundGroupTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UIGroupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UIGroupTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UITable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/Core/UITable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/LevelTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataTable/LevelTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAAGameData/DataTables/Core/EntityGroupTable.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/AAAGameData/DataTables/Core/EntityGroupTable.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/EntityGroupTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/DataTable/Core/EntityGroupTable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Common/Core/Const.Groups.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Common/Core/Const.Groups.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyGameProcedure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MyMenuProcedure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/UnityGameFramework/GameFramework/Entity/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/UnityGameFramework/GameFramework/Entity/EntityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Extension/EntityExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Extension/EntityExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/MyMenuUIForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/GFBuiltin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Procedures/UpdateResourcesProcedure.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -134,7 +136,8 @@
       <workItem from="1730374663975" duration="1000" />
       <workItem from="1730374683928" duration="16000" />
       <workItem from="1730374708172" duration="601000" />
-      <workItem from="1730391518116" duration="2379000" />
+      <workItem from="1730391518116" duration="2440000" />
+      <workItem from="1730421114361" duration="4971000" />
     </task>
     <servers />
   </component>

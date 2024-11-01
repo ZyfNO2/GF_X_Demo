@@ -71,12 +71,13 @@ public class PlayerEntity : SampleEntity
         float movePower = 1f;
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        characterCtrl.transform.forward = new Vector3(h, 0, v);
+        
         
         if (isGrounded )
         {
             if (playerVelocity.y < 0) playerVelocity.y = 0;
             if(h==0 && v==0) return;
+            characterCtrl.transform.forward = new Vector3(h, 0, v).normalized;
             moveStep = characterCtrl.transform.forward * (moveSpeed * movePower);
             //moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
         }

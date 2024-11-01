@@ -1,4 +1,4 @@
-using GameFramework;
+﻿using GameFramework;
 using GameFramework.Event;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +28,7 @@ public class LevelEntity : EntityBase
         IsAllReady = false;
         loadEntityTaskList?.Clear();
         enemyList?.Clear();
+        
         SpawnAllEntity();
     }
     protected override void OnHide(bool isShutdown, object userData)
@@ -44,6 +45,13 @@ public class LevelEntity : EntityBase
 
         mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
         loadEntityTaskList.Add(mPlayerId);
+        
+        
+        var billboardParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles, playerSpawnPoint.localScale * 5);
+        
+        var mBillboardId = GF.Entity.ShowEntity<BillboardEntity>("BillBoardItem", Const.EntityGroup.Billboard, billboardParams);
+
+        loadEntityTaskList.Add(mBillboardId); 
     }
     public void StartGame()
     {

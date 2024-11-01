@@ -193,7 +193,7 @@ public static class EntityExtension
     {
         return eCom.ShowEntity<T>(pfbName, eGroup, 0, parms);
     }
-
+    
     /// <summary>
     /// 隐藏一个Entity组下所有Entities
     /// </summary>
