@@ -49,28 +49,13 @@ public class PlayerEntity : SampleEntity
 
         Build();
 
-
+        
 
     }
 
     private void Move()
     {
-        //float movePower = GF.StaticUI.Joystick.GetDistance();
-        // joystickForward.Set(GF.StaticUI.Joystick.GetHorizontalAxis(), 0, GF.StaticUI.Joystick.GetVerticalAxis());
-        // if (movePower > 0.001f)
-        // {
-        //     characterCtrl.transform.forward = Vector3.Slerp(characterCtrl.transform.forward, joystickForward, Time.deltaTime * rotationSpeed);
-        // }
-
-        // if (isGrounded)
-        // {
-        //     if (playerVelocity.y < 0) playerVelocity.y = 0;
-        //     moveStep = characterCtrl.transform.forward * moveSpeed * movePower;
-        // }
-
-        //characterCtrl.Move(moveStep * Time.deltaTime);
-
-
+            
         float movePower = 1f;
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -105,19 +90,32 @@ public class PlayerEntity : SampleEntity
         
         if (Input.GetKeyDown(KeyCode.B))
         {
-            Log.Info("<<<<<<<<<<<<<<<" + "InBuild");
-            var buildingEntity = EntityParams.Create(this.transform.position, this.transform.eulerAngles,
-                this.transform.localScale );
-            
-            var mBuildingEntityId = GF.Entity.ShowEntity<BuildingEntity>("BuildingTest", Const.EntityGroup.Buliding, buildingEntity);
-            
-            loadEntityTaskList.Add(mBuildingEntityId);
+            SpawnBuilding();
         }
-        
-        
     }
-    
-    
-    
-    
+
+    private void SpawnBuilding()
+    {
+        //Log.Info("<<<<<<<<<<<<<<<" + "InBuild");
+        var buildingEntityParams = EntityParams.Create(this.transform.position, this.transform.eulerAngles,
+            this.transform.localScale );
+
+        buildingEntityParams.OnShowCallback = logic =>
+        {
+            if (loadEntityTaskList.Count > 0)
+            {
+                foreach (var mBuildingEntityId in loadEntityTaskList)
+                {
+                    var buildingEntity = GF.Entity.GetEntity<BuildingEntity>(mBuildingEntityId);
+                    buildingEntity.SetCamp(Camp.Knights);
+            
+                    Log.Info("<<<<<<<<<<<<<<<" + buildingEntity.GetCamp());
+                }
+            }
+        };
+        //!!!硬编码，之后读表改     
+        var mBuildingEntityId = GF.Entity.ShowEntity<BuildingEntity>("BuildingTest", Const.EntityGroup.Building, buildingEntityParams);
+            
+        loadEntityTaskList.Add(mBuildingEntityId);
+    }
 }

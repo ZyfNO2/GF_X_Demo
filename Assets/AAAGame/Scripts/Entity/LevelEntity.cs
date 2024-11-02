@@ -9,7 +9,9 @@ public class LevelEntity : EntityBase
     public const string P_LevelData = "LevelData";
     public const string P_LevelReadyCallback = "OnLevelReady";
     public bool IsAllReady { get; private set; }
+    
     private Transform playerSpawnPoint;
+    
     List<int> loadEntityTaskList;
     int mPlayerId;
     public int PlayerId { get => mPlayerId; }
@@ -20,6 +22,7 @@ public class LevelEntity : EntityBase
         loadEntityTaskList = new List<int>();
         enemyList = new List<int>();
         playerSpawnPoint = transform.Find("PlayerSpawnPoint");
+        
     }
     protected override void OnShow(object userData)
     {

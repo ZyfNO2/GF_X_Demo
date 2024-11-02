@@ -31,15 +31,7 @@ public class GameProcedure : ProcedureBase
         var uiParms = UIParams.Create();
         uiParms.ButtonClickCallback = (sender, btId) =>
         {
-            switch (btId)
-            {
-                case "ADD":
-                    Level.AddEnemies(10);
-                    break;
-                case "SUB":
-                    Level.RemoveEnemies(10);
-                    break;
-            }
+            
         };
         GF.UI.OpenUIForm(UIViews.GameUIForm, uiParms);
     }

@@ -10,8 +10,8 @@ public static partial class Const
 		Level,
 		Bullet,
 		Unrecycle,
-		Buliding,
-		Enemy
+		Building,
+		Unit
 	}
 	public enum UIGroup
 	{
