@@ -4,18 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
+public static class LevelPlayer
+{
+    public static int PlayerId;
+}
+
 public class LevelEntity : EntityBase
 {
     public const string P_LevelData = "LevelData";
     public const string P_LevelReadyCallback = "OnLevelReady";
+    
+    
     public bool IsAllReady { get; private set; }
     
     private Transform playerSpawnPoint;
+    private Transform[] enemyTransFormList; 
     
     List<int> loadEntityTaskList;
     int mPlayerId;
-    public int PlayerId { get => mPlayerId; }
+    
+    
+    //public int PlayerId { get => mPlayerId; }
     List<int> enemyList;
+    
+    
+    
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
@@ -33,6 +46,7 @@ public class LevelEntity : EntityBase
         enemyList?.Clear();
         
         SpawnAllEntity();
+        
     }
     protected override void OnHide(bool isShutdown, object userData)
     {
@@ -42,13 +56,30 @@ public class LevelEntity : EntityBase
     }
 
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void SpawnAllEntity()
+    {
+        SpawnPlayer();
+        SpawnEnemy();
+    }
+
+    private void SpawnPlayer()
     {
         var playerParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles, playerSpawnPoint.localScale);
 
         mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
+
+        LevelPlayer.PlayerId = mPlayerId;
+        
         loadEntityTaskList.Add(mPlayerId);
     }
+
+    private void SpawnEnemy()
+    {
+        
+    }
+
+
     public void StartGame()
     {
         var player = GF.Entity.GetEntity<PlayerEntity>(mPlayerId);

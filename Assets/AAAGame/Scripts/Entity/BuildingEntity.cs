@@ -17,8 +17,15 @@ public class BuildingEntity : SampleEntity
     private float lastSpawnTime;    
     
     List<int> loadEntityTaskList;
-    
-    
+
+
+    protected override void OnInit(object userData)
+    {
+        base.OnInit(userData);
+        //我搞不懂为什么不初始化就报空，难道不会自己初始化么，亚希吧
+        loadEntityTaskList = new List<int>();
+    }
+
     public void SetCamp(Camp camp)
     {
         this.camp = camp;
@@ -46,24 +53,26 @@ public class BuildingEntity : SampleEntity
 
             unitEntityParams.OnShowCallback = logic =>
             {
-                if (loadEntityTaskList.Count > 0)
+                if (loadEntityTaskList.Count != 0)
                 {
                     foreach (var unitEntityId in loadEntityTaskList)
                     {
-                        var unitEntity = GF.Entity.GetEntity<BuildingEntity>(unitEntityId);
+                        var unitEntity = GF.Entity.GetEntity<UnitEntity>(unitEntityId);
             
-                        unitEntity.SetCamp(Camp.Knights);
+                        unitEntity.SetCamp(this.camp);
+                        
                     }
                 }
-                
+                  
             };
             
             //!!!硬编码，之后读表改
-            var mUnitEntityId = GF.Entity.ShowEntity<UnitEntity>("EnemyTest", Const.EntityGroup.Unit,unitEntityParams );
+            var mUnitEntityId = GF.Entity.ShowEntity<UnitEntity>("EnemyTest", Const.EntityGroup.Unit, unitEntityParams );
             
-            loadEntityTaskList.Add( mUnitEntityId);
-
+            loadEntityTaskList.Add(mUnitEntityId);
+            
             lastSpawnTime += Time.time;
+            
         }
     }
     

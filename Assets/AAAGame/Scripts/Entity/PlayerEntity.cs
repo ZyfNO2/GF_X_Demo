@@ -8,15 +8,15 @@ public class PlayerEntity : SampleEntity
     public virtual bool IsAIPlayer { get => false; }
     private Vector3 joystickForward;
     private float moveSpeed = 10f;
-    private float rotationSpeed = 10f;
+    
     CharacterController characterCtrl;
     private Vector3 playerVelocity;
-    private float jumpHeight = 3f;
+    
     private bool isGrounded;
     private Vector3 moveStep;
     //private Transform firePoint;
-    private float fireInterval = 0.4f;
-    private float lastFireTime;
+    
+    
     private bool mCtrlable;
     
     List<int> loadEntityTaskList;
@@ -112,7 +112,9 @@ public class PlayerEntity : SampleEntity
                     Log.Info("<<<<<<<<<<<<<<<" + buildingEntity.GetCamp());
                 }
             }
+            
         };
+        
         //!!!硬编码，之后读表改     
         var mBuildingEntityId = GF.Entity.ShowEntity<BuildingEntity>("BuildingTest", Const.EntityGroup.Building, buildingEntityParams);
             
