@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1503523659678466387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5102073130900034960}
+  - component: {fileID: 8179528753624742796}
+  m_Layer: 8
+  m_Name: AttackRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5102073130900034960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503523659678466387}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5285301153359248733}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &8179528753624742796
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503523659678466387}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.42, z: 0}
 --- !u!1 &4886806596502399705
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +64,7 @@ GameObject:
   - component: {fileID: 3839427328385505380}
   - component: {fileID: 551488469716460131}
   - component: {fileID: 9173675315363119376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpriteBillboardTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 4886806596502399705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.001, z: 0}
+  m_LocalPosition: {x: 0, y: 0.373, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -109,7 +162,7 @@ GameObject:
   - component: {fileID: 5285301153359248733}
   - component: {fileID: 701053034886582653}
   - component: {fileID: 299498152724340988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,6 +183,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3839427328385505380}
+  - {fileID: 5102073130900034960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &701053034886582653
@@ -157,7 +211,7 @@ CharacterController:
   m_StepOffset: 0.2
   m_SkinWidth: 0.2
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.41, z: 0}
 --- !u!195 &299498152724340988
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -177,6 +231,6 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.43
-  m_BaseOffset: -0.79
+  m_BaseOffset: -0.23
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

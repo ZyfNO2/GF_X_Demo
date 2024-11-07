@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2076366472609493768}
   - component: {fileID: 2463941602647769986}
   - component: {fileID: 6668553023715061262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5915553705682729707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lv_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752109353654516975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemySpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 8106675469297944805}
   - component: {fileID: 880192003012279788}
   - component: {fileID: 5362886355305755590}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.1
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 3c9985a2a084fec4ea3637ee93345d56, type: 2}
   m_BuildHeightMesh: 0
@@ -318,7 +318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3786969401776574267}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}

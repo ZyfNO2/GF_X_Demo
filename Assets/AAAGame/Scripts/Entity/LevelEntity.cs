@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-public static class LevelPlayer
+public static class LevelInfo
 {
     public static int PlayerId;
 }
@@ -13,30 +13,31 @@ public class LevelEntity : EntityBase
 {
     public const string P_LevelData = "LevelData";
     public const string P_LevelReadyCallback = "OnLevelReady";
-    
-    
+
+
     public bool IsAllReady { get; private set; }
-    
+
     private Transform playerSpawnPoint;
-    private Transform[] enemyTransFormList; 
-    
+    private Transform[] enemyTransFormList;
+
     List<int> loadEntityTaskList;
     int mPlayerId;
+
+
     
-    
-    //public int PlayerId { get => mPlayerId; }
     List<int> enemyList;
-    
-    
-    
+
+
+
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
         loadEntityTaskList = new List<int>();
         enemyList = new List<int>();
         playerSpawnPoint = transform.Find("PlayerSpawnPoint");
-        
+
     }
+
     protected override void OnShow(object userData)
     {
         base.OnShow(userData);
@@ -44,10 +45,11 @@ public class LevelEntity : EntityBase
         IsAllReady = false;
         loadEntityTaskList?.Clear();
         enemyList?.Clear();
-        
+
         SpawnAllEntity();
-        
+
     }
+
     protected override void OnHide(bool isShutdown, object userData)
     {
         GF.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
@@ -65,26 +67,28 @@ public class LevelEntity : EntityBase
 
     private void SpawnPlayer()
     {
-        var playerParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles, playerSpawnPoint.localScale);
+        var playerParams = EntityParams.Create(playerSpawnPoint.position, playerSpawnPoint.eulerAngles,
+            playerSpawnPoint.localScale);
 
         mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
 
-        LevelPlayer.PlayerId = mPlayerId;
-        
+        LevelInfo.PlayerId = mPlayerId;
+
         loadEntityTaskList.Add(mPlayerId);
     }
 
     private void SpawnEnemy()
     {
-        
+
     }
 
 
     public void StartGame()
     {
         var player = GF.Entity.GetEntity<PlayerEntity>(mPlayerId);
-        player.Ctrlable = true;
+        //player.Ctrlable = true;
     }
+
     private void OnShowEntitySuccess(object sender, GameEventArgs e)
     {
         var eArgs = e as ShowEntitySuccessEventArgs;
@@ -96,6 +100,7 @@ public class LevelEntity : EntityBase
             {
                 CameraFollower.Instance.SetFollowTarget(eArgs.Entity.transform);
             }
+
             if (IsAllReady)
             {
                 if (Params.TryGet<VarObject>(LevelEntity.P_LevelReadyCallback, out var callback))
@@ -129,9 +134,11 @@ public class LevelEntity : EntityBase
             {
                 break;
             }
+
             int eId = enemyList[0];
             GF.Entity.HideEntitySafe(eId);
             enemyList.RemoveAt(0);
         }
     }
+
 }

@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using GameFramework;
+using GameFramework.Event;
 //using AAAGame.Scripts.Entity;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -6,7 +8,7 @@ using UnityGameFramework.Runtime;
 public class PlayerEntity : SampleEntity
 {
     public virtual bool IsAIPlayer { get => false; }
-    private Vector3 joystickForward;
+
     private float moveSpeed = 10f;
     
     CharacterController characterCtrl;
@@ -14,28 +16,39 @@ public class PlayerEntity : SampleEntity
     
     private bool isGrounded;
     private Vector3 moveStep;
-    //private Transform firePoint;
+ 
+    //!!! 先pubilc 测试
+    public List<UnitEntity> enemyList;
+    
+    private int Hp;
     
     
     private bool mCtrlable;
     
     List<int> loadEntityTaskList;
+
+    public Camp camp = Camp.Knights;
     
-    public bool Ctrlable
-    {
-        get => mCtrlable;
-        set
-        {
-            mCtrlable = value;
-            if (!IsAIPlayer) GF.StaticUI.JoystickEnable = mCtrlable;
-        }
-    }
+    // public bool Ctrlable
+    // {
+    //     get => mCtrlable;
+    //     set
+    //     {
+    //         mCtrlable = value;
+    //         if (!IsAIPlayer) GF.StaticUI.JoystickEnable = mCtrlable;
+    //     }
+    // }
+    
+    
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
         characterCtrl = GetComponent<CharacterController>();
         loadEntityTaskList = new List<int>();
-        //firePoint = transform.Find("FirePoint");
+        
+        GF.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
+        
+        
     }
     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
@@ -48,10 +61,14 @@ public class PlayerEntity : SampleEntity
         Jump();
 
         Build();
-
-        
-
     }
+
+    protected override void OnHide(bool isShutdown, object userData)
+    {
+        base.OnHide(isShutdown, userData);
+        GF.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
+    }
+
 
     private void Move()
     {
@@ -87,8 +104,7 @@ public class PlayerEntity : SampleEntity
 
     private void Build()
     {
-        
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SpawnBuilding();
         }
@@ -100,24 +116,48 @@ public class PlayerEntity : SampleEntity
         var buildingEntityParams = EntityParams.Create(this.transform.position, this.transform.eulerAngles,
             this.transform.localScale );
 
-        buildingEntityParams.OnShowCallback = logic =>
-        {
-            if (loadEntityTaskList.Count > 0)
-            {
-                foreach (var mBuildingEntityId in loadEntityTaskList)
-                {
-                    var buildingEntity = GF.Entity.GetEntity<BuildingEntity>(mBuildingEntityId);
-                    buildingEntity.SetCamp(Camp.Knights);
-            
-                    Log.Info("<<<<<<<<<<<<<<<" + buildingEntity.GetCamp());
-                }
-            }
-            
-        };
+        // buildingEntityParams.OnShowCallback = logic =>
+        // {
+        //     if (loadEntityTaskList.Count > 0)
+        //     {
+        //         foreach (var mBuildingEntityId in loadEntityTaskList)
+        //         {
+        //             var buildingEntity = GF.Entity.GetEntity<BuildingEntity>(mBuildingEntityId);
+        //             buildingEntity.SetCamp(Camp.Knights);
+        //     
+        //             Log.Info("<<<<<<<<<<<<<<<" + buildingEntity.GetCamp());
+        //         }
+        //     }
+        //     
+        // };
         
         //!!!硬编码，之后读表改     
         var mBuildingEntityId = GF.Entity.ShowEntity<BuildingEntity>("BuildingTest", Const.EntityGroup.Building, buildingEntityParams);
             
         loadEntityTaskList.Add(mBuildingEntityId);
     }
+
+    public void Hurt()
+    {
+        
+    }
+    
+    private void OnShowEntitySuccess(object sender, GameEventArgs e)
+    {
+        var eArgs = e as ShowEntitySuccessEventArgs;
+        if (loadEntityTaskList.Contains(eArgs.Entity.Id))
+        {
+            var buildingEntity = GF.Entity.GetEntity<BuildingEntity>(eArgs.Entity.Id);
+            buildingEntity.SetCamp(Camp.Knights);
+            
+            Log.Info("<<<<<<<<<<<<<<<" + buildingEntity.GetCamp());
+            loadEntityTaskList.Remove(eArgs.Entity.Id);
+            
+        }
+    }
+    
+    
+    
+    
+    
 }

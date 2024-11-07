@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using GameFramework.Event;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 public enum Camp
 {
+    Undefined,
     Knights,
     Goblins,
     
@@ -18,14 +21,29 @@ public class BuildingEntity : SampleEntity
     
     List<int> loadEntityTaskList;
 
+    private List<UnitEntity> unitList;
+
 
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
-        //我搞不懂为什么不初始化就报空，难道不会自己初始化么，亚希吧
+        GF.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
         loadEntityTaskList = new List<int>();
+        unitList = new List<UnitEntity>();
     }
 
+
+    protected override void OnShow(object userData)
+    {
+        base.OnShow(userData);
+    }
+
+    protected override void OnHide(bool isShutdown, object userData)
+    {
+        base.OnHide(isShutdown, userData);
+        GF.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
+    }
+    
     public void SetCamp(Camp camp)
     {
         this.camp = camp;
@@ -42,6 +60,8 @@ public class BuildingEntity : SampleEntity
         SpawnEntity();
     }
 
+    
+
 
     private void SpawnEntity()
     {
@@ -53,29 +73,36 @@ public class BuildingEntity : SampleEntity
 
             unitEntityParams.OnShowCallback = logic =>
             {
-                if (loadEntityTaskList.Count != 0)
-                {
-                    foreach (var unitEntityId in loadEntityTaskList)
-                    {
-                        var unitEntity = GF.Entity.GetEntity<UnitEntity>(unitEntityId);
-            
-                        unitEntity.SetCamp(this.camp);
-                        
-                    }
-                }
-                  
+                
             };
             
+            lastSpawnTime += Time.time;
             //!!!硬编码，之后读表改
             var mUnitEntityId = GF.Entity.ShowEntity<UnitEntity>("EnemyTest", Const.EntityGroup.Unit, unitEntityParams );
             
-            loadEntityTaskList.Add(mUnitEntityId);
             
-            lastSpawnTime += Time.time;
+            loadEntityTaskList.Add(mUnitEntityId);
+        
+            
             
         }
     }
     
     
+    private void OnShowEntitySuccess(object sender, GameEventArgs e)
+    {
+        var eArgs = e as ShowEntitySuccessEventArgs;
+        
+        if (loadEntityTaskList.Contains(eArgs.Entity.Id))
+        {
+            var unitEntity = GF.Entity.GetEntity<UnitEntity>(eArgs.Entity.Id);
+            unitEntity.SetCamp(Camp.Goblins);
+            unitList.Add(unitEntity);
+            Log.Info("<<<<<<<<<<<<<<<" + unitEntity.GetCamp());
+            
+            loadEntityTaskList.Remove(eArgs.Entity.Id);
+        }
+    }
+
     
 }
