@@ -5,7 +5,7 @@ using GameFramework.Event;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-public class PlayerEntity : SampleEntity
+public partial class PlayerEntity : SampleEntity
 {
     public virtual bool IsAIPlayer { get => false; }
 
@@ -29,15 +29,6 @@ public class PlayerEntity : SampleEntity
 
     public Camp camp = Camp.Knights;
     
-    // public bool Ctrlable
-    // {
-    //     get => mCtrlable;
-    //     set
-    //     {
-    //         mCtrlable = value;
-    //         if (!IsAIPlayer) GF.StaticUI.JoystickEnable = mCtrlable;
-    //     }
-    // }
     
     
     protected override void OnInit(object userData)
@@ -94,10 +85,6 @@ public class PlayerEntity : SampleEntity
 
     private void Jump()
     {
-        // if (isGrounded && (Input.GetMouseButtonDown(0) && !GF.UI.IsPointerOverUIObject(Input.mousePosition) || Input.GetButtonDown("Jump")))
-        // {
-        //     playerVelocity.y += Mathf.Sqrt(jumpHeight * -3f * Physics.gravity.y);
-        // }
         playerVelocity.y += Physics.gravity.y * Time.deltaTime;
         characterCtrl.Move(playerVelocity * Time.deltaTime);
     }
@@ -115,31 +102,11 @@ public class PlayerEntity : SampleEntity
         //Log.Info("<<<<<<<<<<<<<<<" + "InBuild");
         var buildingEntityParams = EntityParams.Create(this.transform.position, this.transform.eulerAngles,
             this.transform.localScale );
-
-        // buildingEntityParams.OnShowCallback = logic =>
-        // {
-        //     if (loadEntityTaskList.Count > 0)
-        //     {
-        //         foreach (var mBuildingEntityId in loadEntityTaskList)
-        //         {
-        //             var buildingEntity = GF.Entity.GetEntity<BuildingEntity>(mBuildingEntityId);
-        //             buildingEntity.SetCamp(Camp.Knights);
-        //     
-        //             Log.Info("<<<<<<<<<<<<<<<" + buildingEntity.GetCamp());
-        //         }
-        //     }
-        //     
-        // };
         
         //!!!硬编码，之后读表改     
         var mBuildingEntityId = GF.Entity.ShowEntity<BuildingEntity>("BuildingTest", Const.EntityGroup.Building, buildingEntityParams);
             
         loadEntityTaskList.Add(mBuildingEntityId);
-    }
-
-    public void Hurt()
-    {
-        
     }
     
     private void OnShowEntitySuccess(object sender, GameEventArgs e)

@@ -7,35 +7,39 @@ using UnityGameFramework.Runtime;
 public static class LevelInfo
 {
     public static int PlayerId;
+    public static int LevelId;
 }
 
 public class LevelEntity : EntityBase
 {
     public const string P_LevelData = "LevelData";
     public const string P_LevelReadyCallback = "OnLevelReady";
-
-
+    
     public bool IsAllReady { get; private set; }
 
     private Transform playerSpawnPoint;
     private Transform[] enemyTransFormList;
 
     List<int> loadEntityTaskList;
-    int mPlayerId;
-
-
+    public List<int> enemyList;
+    public List<int> allyList;
+    public List<int> enemyBuildingList;
     
-    List<int> enemyList;
-
-
+    
+    int mPlayerId;
+    
+   
 
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
         loadEntityTaskList = new List<int>();
         enemyList = new List<int>();
+        enemyBuildingList = new List<int>();
+        
         playerSpawnPoint = transform.Find("PlayerSpawnPoint");
-
+        LevelInfo.LevelId = this.Id;
+        
     }
 
     protected override void OnShow(object userData)
@@ -111,34 +115,34 @@ public class LevelEntity : EntityBase
         }
     }
 
-    internal void AddEnemies(int v)
-    {
-        var player = GF.Entity.GetEntity<PlayerEntity>(mPlayerId);
-        int spawnCount = v;
-        for (int i = 0; i < spawnCount; i++)
-        {
-            var randomPos = UnityEngine.Random.insideUnitCircle * 5;
-            var enemyParams = EntityParams.Create();
-            enemyParams.position = player.transform.position + new Vector3(randomPos.x, 0, randomPos.y);
-            enemyParams.eulerAngles = Vector3.up * UnityEngine.Random.value * 360f;
-            var enemyId = GF.Entity.ShowEntity<SampleEntity>("MyPlayer", Const.EntityGroup.Player, enemyParams);
-            enemyList.Add(enemyId);
-        }
-    }
-
-    internal void RemoveEnemies(int v)
-    {
-        for (int i = 0; i < v; i++)
-        {
-            if (enemyList.Count <= 0)
-            {
-                break;
-            }
-
-            int eId = enemyList[0];
-            GF.Entity.HideEntitySafe(eId);
-            enemyList.RemoveAt(0);
-        }
-    }
+    // internal void AddEnemies(int v)
+    // {
+    //     var player = GF.Entity.GetEntity<PlayerEntity>(mPlayerId);
+    //     int spawnCount = v;
+    //     for (int i = 0; i < spawnCount; i++)
+    //     {
+    //         var randomPos = UnityEngine.Random.insideUnitCircle * 5;
+    //         var enemyParams = EntityParams.Create();
+    //         enemyParams.position = player.transform.position + new Vector3(randomPos.x, 0, randomPos.y);
+    //         enemyParams.eulerAngles = Vector3.up * UnityEngine.Random.value * 360f;
+    //         var enemyId = GF.Entity.ShowEntity<SampleEntity>("MyPlayer", Const.EntityGroup.Player, enemyParams);
+    //         enemyList.Add(enemyId);
+    //     }
+    // }
+    //
+    // internal void RemoveEnemies(int v)
+    // {
+    //     for (int i = 0; i < v; i++)
+    //     {
+    //         if (enemyList.Count <= 0)
+    //         {
+    //             break;
+    //         }
+    //
+    //         int eId = enemyList[0];
+    //         GF.Entity.HideEntitySafe(eId);
+    //         enemyList.RemoveAt(0);
+    //     }
+    // }
 
 }

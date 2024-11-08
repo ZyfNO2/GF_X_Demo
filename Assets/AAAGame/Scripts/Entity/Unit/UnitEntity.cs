@@ -12,6 +12,7 @@ using UnityGameFramework.Runtime;
 /// 状态机？
 /// HP      接口   IHitable
 /// Atk     接口   IAtkable
+/// 设置一个总manager
 /// </summary>
 
 
@@ -20,13 +21,14 @@ public partial class UnitEntity : SampleEntity
     private Camp camp;
     private int mUnitId;
     private GameObject mPlayer;
-    private SphereCollider attackRange;
+    
+    private Transform atkPosition;
+    private SphereCollider atkRange;
     private float atkDistance = 2f;
     
-    
     NavMeshAgent m_Agent;
-    
-    
+    private int mHp;
+    private int mAtk;
     
     public void SetCamp(Camp camp)
     {
@@ -43,14 +45,44 @@ public partial class UnitEntity : SampleEntity
     {
         base.OnInit(userData);
         m_Agent = GetComponent<NavMeshAgent>();
-        attackRange = GameObject.Find("AttackRange").GetComponent<SphereCollider>();
-        
+        atkPosition = GameObject.Find("AttackPosition").transform;
+        atkRange = atkPosition.GetComponent<SphereCollider>();
     }
 
     protected override void OnShow(object userData)
     {
         base.OnShow(userData);
+
+        atkRange.enabled = false;
+        atkPosition.gameObject.SetActive(false);
+        
+        switch (camp)
+        {
+            case Camp.Goblins:
+                GoblinsOnShow();
+                break;
+            case Camp.Knights:
+                KnightsOnShow();
+                break;
+        }
+        
     }
+    
+    protected override void OnHide(bool isShutdown, object userData)
+    {
+        base.OnHide(isShutdown, userData);
+        switch (camp)
+        {
+            case Camp.Goblins:
+                GoblinsOnHide();
+                break;
+            case Camp.Knights:
+                KnightsOnHide();
+                break;
+        }
+    }
+
+    
 
     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
@@ -59,14 +91,14 @@ public partial class UnitEntity : SampleEntity
         Move();
 
         Attack();
+        
+        
     }
 
-    protected override void OnHide(bool isShutdown, object userData)
-    {
-        base.OnHide(isShutdown, userData);
-    }
+    
 
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void Attack()
     {
         switch (camp)
@@ -86,14 +118,16 @@ public partial class UnitEntity : SampleEntity
 
         m_Agent.destination = targetPosition;
     }
-
-
+    
     private Transform GetPlayerTransform()
     {
         return  GF.Entity.GetEntity<PlayerEntity>(LevelInfo.PlayerId).transform;
     }
-    
-    
+
+    private PlayerEntity GetPlayer()
+    {
+        return GF.Entity.GetEntity<PlayerEntity>(LevelInfo.PlayerId);
+    }
     
 }
     
