@@ -5,28 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.Attack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.Attack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Sprites/Goblin_House.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Sprites/Goblin_House.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Custom_Translucent.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Custom_Translucent.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Transparent.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Transparent.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Sphere.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Sphere.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/GameDataModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/GameDataModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base/Singleton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base/Singleton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/LevelManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/LevelManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/ExposTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/ExposTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/TestTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/TestTrigger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/CopilotChatHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/CopilotChatHistory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/BuildingTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/BuildingTest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/EnemyTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/EnemyTest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/MyPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/MyPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/BuildingEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/BuildingEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/BuildingEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/BuildingEntity.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Core/EntityParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Core/EntityParams.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/PlayerEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/UnitEntity.Goblins.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.Goblins.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/UnitEntity.Goblins.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.Goblins.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/UnitEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/UnitEntity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/UnityEntity.Kinghts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnityEntity.Kinghts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/UnityEntity.Kinghts.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnityEntity.Kinghts.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Extension/GF.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Extension/GF.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/BuildingEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/BuildingEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.Goblins.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.Goblins.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnityEntity.Kinghts.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnityEntity.Kinghts.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +55,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b9f607e27b8644e0bf609b59dfb1c8525735b0/67/ed26dac0/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc2f9c8962ab4786828dbc883e8fcfa01fe00/d3/a839c9f4/Collider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Common/CameraFollower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/ChangeSceneProcedure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/MenuProcedure.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/Procedures/PreloadProcedure.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/ExposTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/Scripts/UI/MyMenuUIForm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/GFBuiltin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Procedures/UpdateResourcesProcedure.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,32 +81,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Notification.DisplayName-DoNotAsk-default": "default",
-    "Notification.DoNotAsk-default": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.36374268",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true",
-    "附加到 Unity 编辑器.附加到 Unity 编辑器.executor": "Debug"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-default&quot;: &quot;default&quot;,
+    &quot;Notification.DoNotAsk-default&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.36374268&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\ZYF\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\ZYF\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\ZYF\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\ZYF\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\ZYF\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\ZYF\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\Unity\Unity Editor\2022.3.50f1\Editor\Unity.exe" />
@@ -108,10 +124,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="31172">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="31172" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -172,6 +188,8 @@
       <workItem from="1730998343427" duration="597000" />
       <workItem from="1731026144874" duration="11439000" />
       <workItem from="1731049265390" duration="5877000" />
+      <workItem from="1731144760629" duration="3753000" />
+      <workItem from="1731149153569" duration="8436000" />
     </task>
     <servers />
   </component>

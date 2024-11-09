@@ -127,7 +127,6 @@ public static class UtilityBuiltin
         public static string GetEntityPath(string name)
         {
             return Utility.Text.Format("Assets/AAAGame/Prefabs/Entity/{0}.prefab", name);
-            
         }
 
         public static string GetUIFormPath(string v)

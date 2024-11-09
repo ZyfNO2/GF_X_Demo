@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityGameFramework.Runtime;
@@ -16,70 +14,34 @@ using UnityGameFramework.Runtime;
 /// </summary>
 
 
-public partial class UnitEntity : SampleEntity
+public class UnitEntity : SampleEntity
 {
-    private Camp camp;
-    private int mUnitId;
-    private GameObject mPlayer;
     
-    private Transform atkPosition;
-    private SphereCollider atkRange;
-    private float atkDistance = 2f;
+    private GameObject mPlayer;
     
     NavMeshAgent m_Agent;
     private int mHp;
     private int mAtk;
-    
-    public void SetCamp(Camp camp)
-    {
-        this.camp = camp;
-    }
-
-    public Camp GetCamp()
-    {
-        return this.camp;
-    }
-
 
     protected override void OnInit(object userData)
     {
         base.OnInit(userData);
         m_Agent = GetComponent<NavMeshAgent>();
-        atkPosition = GameObject.Find("AttackPosition").transform;
-        atkRange = atkPosition.GetComponent<SphereCollider>();
+   
+        
     }
 
     protected override void OnShow(object userData)
     {
         base.OnShow(userData);
-
-        atkRange.enabled = false;
-        atkPosition.gameObject.SetActive(false);
-        
-        switch (camp)
-        {
-            case Camp.Goblins:
-                GoblinsOnShow();
-                break;
-            case Camp.Knights:
-                KnightsOnShow();
-                break;
-        }
-        
+        LevelManager.Instance.enemyList.Add(this.Id);
+        Log.Info(LevelManager.Instance.enemyList.Count);
     }
     
     protected override void OnHide(bool isShutdown, object userData)
     {
         base.OnHide(isShutdown, userData);
-        switch (camp)
-        {
-            case Camp.Goblins:
-                GoblinsOnHide();
-                break;
-            case Camp.Knights:
-                KnightsOnHide();
-                break;
-        }
+
     }
 
     
@@ -101,33 +63,21 @@ public partial class UnitEntity : SampleEntity
     // ReSharper disable Unity.PerformanceAnalysis
     private void Attack()
     {
-        switch (camp)
-        {
-            case Camp.Goblins:
-                GoblinsAttack();
-                break;
-            case Camp.Knights:
-                KnightsAttack();
-                break;
-        }
+
     }
 
     private void Move()
     {
-        var targetPosition = GetPlayerTransform().position;
+        var gameProcedure = GF.Procedure.CurrentProcedure as MyGameProcedure;
+
+        var PlayerId = LevelManager.Instance.playerId;
+        
+        var targetPosition = GF.Entity.GetEntity<PlayerEntity>(PlayerId).transform.position;
 
         m_Agent.destination = targetPosition;
     }
     
-    private Transform GetPlayerTransform()
-    {
-        return  GF.Entity.GetEntity<PlayerEntity>(LevelInfo.PlayerId).transform;
-    }
-
-    private PlayerEntity GetPlayer()
-    {
-        return GF.Entity.GetEntity<PlayerEntity>(LevelInfo.PlayerId);
-    }
+   
     
 }
     

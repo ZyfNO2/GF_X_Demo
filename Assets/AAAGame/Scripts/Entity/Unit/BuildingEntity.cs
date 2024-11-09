@@ -12,20 +12,9 @@ using Random = System.Random;
 /// <summary>
 /// 生成之后改成多线程
 /// </summary>
-
-
-public enum Camp
-{
-    Undefined,
-    Knights,
-    Goblins,
-}
-
-
-
 public class BuildingEntity : SampleEntity
 {
-    private Camp camp;
+    
     private float spawnInterval = 5f;
     private float lastSpawnTime;    
     
@@ -52,26 +41,17 @@ public class BuildingEntity : SampleEntity
     protected override void OnShow(object userData)
     {
         base.OnShow(userData);
-        GF.Entity.GetEntity<LevelEntity>(LevelInfo.LevelId).enemyList.Add(this.Id);
+        
     }
     
     protected override void OnHide(bool isShutdown, object userData)
     {
         base.OnHide(isShutdown, userData);
         GF.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
-        if(GF.Entity.GetEntity<LevelEntity>(LevelInfo.LevelId) == null) return;
-        GF.Entity.GetEntity<LevelEntity>(LevelInfo.LevelId).enemyList.Remove(this.Id);
+        
     }
     
-    public void SetCamp(Camp camp)
-    {
-        this.camp = camp;
-    }
 
-    public Camp GetCamp()
-    {
-        return this.camp;
-    }
 
     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
@@ -115,17 +95,8 @@ public class BuildingEntity : SampleEntity
         if (loadEntityTaskList.Contains(eArgs.Entity.Id))
         {
             var unitEntity = GF.Entity.GetEntity<UnitEntity>(eArgs.Entity.Id);
-            AwaitToSetCamp(unitEntity,eArgs.Entity.Id);
         }
     }
 
-    private async Task AwaitToSetCamp(UnitEntity unitEntity,int id)
-    {
-        await Task.Delay(100);
-      
-        unitEntity.SetCamp(Camp.Goblins);
-        selfUnitList.Add(unitEntity);
-        
-        loadEntityTaskList.Remove(id);
-    }
+
 }

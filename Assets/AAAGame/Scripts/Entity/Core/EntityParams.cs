@@ -31,10 +31,7 @@ public class EntityParams : RefParams
     /// 实体隐藏时回调
     /// </summary>
     public GameFrameworkAction<EntityLogic> OnHideCallback { get; set; } = null;
-
-    public Camp camp;
     
-
     /// <summary>
     /// 创建一个实例(必须使用该接口创建)
     /// </summary>
@@ -51,25 +48,6 @@ public class EntityParams : RefParams
         eParams.localScale = localScale;
         return eParams;
     }
-    
-    // /// <summary>
-    // /// 自定义的EntityParams，多了一个Camp
-    // /// </summary>
-    // /// <param name="camp"></param>
-    // /// <param name="position"></param>
-    // /// <param name="eulerAngles"></param>
-    // /// <param name="localScale"></param>
-    // /// <returns></returns>
-    // public static EntityParams Create(Camp camp,Vector3? position = null, Vector3? eulerAngles = null, Vector3? localScale = null)
-    // {
-    //     var eParams = ReferencePool.Acquire<EntityParams>();
-    //     eParams.CreateRoot();
-    //     eParams.position = position;
-    //     eParams.eulerAngles = eulerAngles;
-    //     eParams.localScale = localScale;
-    //     eParams.camp = camp;
-    //     return eParams;
-    // }
     
     
     protected override void ResetProperties()

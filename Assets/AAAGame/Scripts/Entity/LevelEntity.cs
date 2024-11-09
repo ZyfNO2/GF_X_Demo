@@ -1,14 +1,9 @@
 ﻿using GameFramework;
 using GameFramework.Event;
 using System.Collections.Generic;
+using dnlib.DotNet.Writer;
 using UnityEngine;
 using UnityGameFramework.Runtime;
-
-public static class LevelInfo
-{
-    public static int PlayerId;
-    public static int LevelId;
-}
 
 public class LevelEntity : EntityBase
 {
@@ -26,7 +21,7 @@ public class LevelEntity : EntityBase
     public List<int> enemyBuildingList;
     
     
-    int mPlayerId;
+    public int mPlayerId;
     
    
 
@@ -38,7 +33,7 @@ public class LevelEntity : EntityBase
         enemyBuildingList = new List<int>();
         
         playerSpawnPoint = transform.Find("PlayerSpawnPoint");
-        LevelInfo.LevelId = this.Id;
+       
         
     }
 
@@ -76,7 +71,7 @@ public class LevelEntity : EntityBase
 
         mPlayerId = GF.Entity.ShowEntity<PlayerEntity>("MyPlayer", Const.EntityGroup.Player, playerParams);
 
-        LevelInfo.PlayerId = mPlayerId;
+        LevelManager.Instance.playerId = mPlayerId;
 
         loadEntityTaskList.Add(mPlayerId);
     }
