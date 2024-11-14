@@ -52,37 +52,27 @@ public partial class PlayerEntity : SampleEntity
     {
         if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift))
         {
-            // var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            // Physics.Raycast(ray.origin, ray.direction, out m_HitInfo);
-            //
-            // Transform target = m_HitInfo.transform;
-            // Log.Info(target.position);
-            // var effectEntityParams = EntityParams.Create(m_HitInfo.transform.position, this.transform.eulerAngles,
-            //     this.transform.localScale );
-            //
-            // GF.Entity.ShowEffect("Sphere", effectEntityParams, 1f, 0);
-            
             
             if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 ray.direction = new Vector3(ray.direction.x, ray.direction.y ,ray.direction.z); // 将射线方向设置为垂直向下
                 RaycastHit hitInfo;
-                //！！！逻辑没问题了，还得改改
-                LayerMask layerMask = 1 << 6;
-                LayerMask ignoreLayer = ~(1 << 7);
                 
-                if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity,layerMask | ignoreLayer))
+                LayerMask layerMask = 1 << 6;
+                
+                if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity,layerMask))
                 {
                     // 使用碰撞点的位置来创建特效实体参数
                     var effectEntityParams = EntityParams.Create(hitInfo.point, this.transform.eulerAngles,
                         this.transform.localScale);
+                    Log.Info(hitInfo.point);
             
                     GF.Entity.ShowEffect("Sphere", effectEntityParams, 1f, 0);
                 }
                 else
                 {
-                    Debug.LogWarning("没有检测到地面");
+                    Log.Info("没有检测到地面");
                 }
             }
             

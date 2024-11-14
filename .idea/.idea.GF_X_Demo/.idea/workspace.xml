@@ -5,41 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a724be92-99c7-4185-bd7e-fbc10d0e872c" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Custom_Translucent.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Custom_Translucent.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Transparent.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Transparent.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Sphere.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Sphere.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/GameDataModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/DataModel/GameDataModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base/Singleton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/Base/Singleton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/LevelManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/EntityManager/LevelManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/ExposTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/ExposTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/TestTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/TestTrigger.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/CopilotChatHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/CopilotChatHistory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GF_X_Demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/BuildingTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/BuildingTest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/EnemyTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/EnemyTest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Lv_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/MyPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/MyPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Core/EntityParams.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Core/EntityParams.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/LevelEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/BuildingEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/BuildingEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Custom_Translucent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Material/Shader/Custom_Translucent.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Sphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Prefabs/Entity/Sphere.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scene/Launch.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scene/Launch.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scene/MyGame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/PlayerEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.Goblins.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.Goblins.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnitEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnityEntity.Kinghts.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/Entity/Unit/UnityEntity.Kinghts.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/TestTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Scripts/TestScripts/TestTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AAAGame/Textures/ShadowRT.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AAAGame/Textures/ShadowRT.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +28,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5e53ad466ce74a6082606d7fa046fc9b95c800/54/3caedeee/Editor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ff3bcb667574bf9a8630184172fcfbf176600/15/289f51b8/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9c96551650554ee0bafac4f8f9339b267c00/d9/a59369fa/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b9f607e27b8644e0bf609b59dfb1c8525735b0/67/ed26dac0/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc2f9c8962ab4786828dbc883e8fcfa01fe00/d3/a839c9f4/Collider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -124,10 +102,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="31172">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="31172" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -190,6 +168,8 @@
       <workItem from="1731049265390" duration="5877000" />
       <workItem from="1731144760629" duration="3753000" />
       <workItem from="1731149153569" duration="8436000" />
+      <workItem from="1731229972122" duration="2786000" />
+      <workItem from="1731597799916" duration="1252000" />
     </task>
     <servers />
   </component>
